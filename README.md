@@ -1,2 +1,0 @@
-# netfliix-clone
- 
