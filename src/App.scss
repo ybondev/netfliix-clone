@@ -1,7 +1,11 @@
 nav {
     z-index: 2;
     display: flex;
-    justify-content: space-between;
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
     .logo {
         z-index: 2;
         img {
@@ -44,16 +48,14 @@ nav {
 }
 
 .netflix-container {
-    position: relative;
     .bg-netflix {
-        height: 533.594px;
-        position: absolute;
-        top: 0;
-        width: 100%;
         img {
+            position: absolute;
+            top: 0;
             width: 100%;
-            height: 100%;
+            height: 740px;
             object-fit: cover;
+            border-bottom: 8px solid gray;
         }
         .img-top-overlay {
             position: absolute;
@@ -64,7 +66,7 @@ nav {
             width: 100%;
             background: rgba(0,0,0,.4);
             background-image: linear-gradient(0deg,rgba(0,0,0,.8) 0,transparent 60%,rgba(0,0,0,.8));
-            border-bottom: 8px solid #222;
+
 
             &::before {
                 content: '';
@@ -73,6 +75,57 @@ nav {
                 position: absolute;
                 top: 0;
                 width: 100%;
+            }
+        }
+    }
+
+    .first-container {
+        position: relative;
+        .text-content {
+            text-align: center;
+            color: #fff;
+            margin: 150px auto;
+
+            .title {
+                font-size: 64px;
+                font-weight: 700;
+            }
+
+            h2 {
+                font-size: 26px;
+                font-weight: 500;
+            }
+
+            h3 {
+                font-size: 19.2px;
+                font-weight: 400;
+            }
+
+            form {
+                color: #000;
+                .form-floating {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .input-group-text {
+                        height: 58px;
+                        color: #fff;
+                        background: #e50914;
+                        border: none;
+                        font-size: 2rem;
+                        border-radius: 0;
+                        margin-left: 0px;
+                    }
+                    .form-control {
+                        border-radius: 0;
+                        width: 100%;
+                        max-width: 500px;
+                    }
+                    label {
+                        left: 22.4%;
+                        color: #8c8c8c;
+                    }
+                }
             }
         }
     }
