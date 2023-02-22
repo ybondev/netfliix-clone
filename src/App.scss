@@ -63,6 +63,7 @@ nav {
             left: 0;
             right: 0;
             bottom: 0;
+            height: 740px;
             width: 100%;
             background: rgba(0,0,0,.4);
             background-image: linear-gradient(0deg,rgba(0,0,0,.8) 0,transparent 60%,rgba(0,0,0,.8));
@@ -112,7 +113,7 @@ nav {
                         color: #fff;
                         background: #e50914;
                         border: none;
-                        font-size: 2rem;
+                        font-size: clamp(1rem, 0.6919rem + 1.3146vw, 1.875rem);
                         border-radius: 0;
                         margin-left: 0px;
                     }
@@ -122,11 +123,101 @@ nav {
                         max-width: 500px;
                     }
                     label {
-                        left: 22.4%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: start;
                         color: #8c8c8c;
+                    }
+
+                    @media screen and (min-width: 768px) {
+                        label {
+                            left: 3%;
+                        }
+                    }
+                    @media screen and (min-width: 992px) {
+                        label {
+                            left: 14%;
+                        }
+                    }
+                    @media screen and (min-width: 1200px) {
+                        label {
+                            left: 19.3%;
+                        }
+                    }
+                    @media screen and (min-width: 1200px) {
+                        label {
+                            left: 22.8%;
+                        }
                     }
                 }
             }
+        }
+    }
+}
+
+// FIRST CONTAINER
+.container-fluid {
+    border-bottom: 8px solid gray;
+}
+.second-container {
+    position: relative;
+    margin-top: 150px;
+    height: auto;
+
+    @media screen and (min-width: 1260px) {
+        .second-container {
+            height: 50px;
+        }
+    }
+    .row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: inherit;
+        .second-row-content {
+            color: #fff;
+            .title {
+                font-size: clamp(1.625rem, 1.0968rem + 2.2535vw, 3.125rem);
+                font-weight: 700;
+            }
+            p {
+                font-size: clamp(1.125rem, 1.092rem + 0.1408vw, 1.21875rem);
+            }
+        }
+        .img-container {
+            display: flex;
+            height: 100%;
+            .d {
+                overflow: hidden;
+                position: relative;
+                img {
+                    position: relative;
+                    height: 100%;
+                }
+                video {
+                    height: 100%;
+                    left: 50%;
+                    max-height: 54%;
+                    max-width: 73%;
+                    position: absolute;
+                    top: 48%;
+                    transform: translate(-50%,-50%);
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.space {
+    margin-top: 50px;
+    .row {
+        flex-direction: column-reverse;
+    }
+
+    @media screen and (min-width: 950px) {
+        .row {
+            flex-direction: unset;
         }
     }
 }

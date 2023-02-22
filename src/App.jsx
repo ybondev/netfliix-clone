@@ -40,11 +40,12 @@ function App() {
         </div>
       </div>
     </div>
-    {/* <div className="container">
-        <div className="row">
+    <div className="container-fluid">
+    <div className="container second-container">
+        <div className="row gy-3">
           <div className="col-md-6">
-            <div className="first-row-content">
-              <h1 className="title">Enjoy your TV.</h1>
+            <div className="second-row-content">
+              <h1 className="title mb-3">Enjoy your TV.</h1>
               <p>
                 Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV,
                 Blu-ray players, and more.
@@ -53,14 +54,36 @@ function App() {
           </div>
           <div className="col-md-6">
             <div className="img-container">
+              <div className="d">
               <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png" alt="..." className="img-fluid" />
               <div className="video-container">
                 <video autoPlay playsInline muted loop src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v"></video>
               </div>
+              </div>
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
+    </div>
+    <div className="container-fluid">
+    <div className="container second-container space">
+        <div className="row gy-3">
+          <div className="col-md-6">
+            <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg" alt="..." className="img-fluid" />
+          </div>
+          <div className="col-md-6">
+            <div className="img-container">
+            <div className="second-row-content">
+              <h1 className="title mb-3">Download your shows to watch offline.</h1>
+              <p>
+              Save your favorites easily and always have something to watch.
+              </p>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     </>
   );
 }

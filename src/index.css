@@ -27,5 +27,5 @@ h1,h2,h3 {
 
 body {
   background: #000;
-  overflow: hidden;
+  overflow-x: hidden;
 }
